@@ -52,6 +52,18 @@ You can also pass your API key into `OpenAIApi` ctor when creating an instance o
 var openai = new OpenAIApi("sk-Me8...6yi");
 ```
 
+**UPDATE Petr987654: You can also change a server:**
+
+Definition of the class OpenAIApi:
+```csharp
+public OpenAIApi(string base_path = "https://api.openai.com/v1", string apiKey = null, string organization = null)
+```
+
+Example:
+```csharp
+private OpenAIApi openai = new OpenAIApi("https://1api.cyclopentane.cc/v1");
+```
+
 **IMPORTANT:** Your API key is a secret. 
 Do not share it with others or expose it in any client-side code (e.g. browsers, apps). 
 If you are using OpenAI for production, make sure to run it on the server side, where your API key can be securely loaded from an environment variable or key management service.
