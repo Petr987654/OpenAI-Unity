@@ -54,7 +54,7 @@ namespace OpenAI
         public string Organization { get; set; }
     }
     #endregion
-    
+
     #region Models API Data Types
     public struct ListModelsResponse: IResponse
     {
