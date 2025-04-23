@@ -20,7 +20,7 @@ To import the package, follow these steps:
 - Open Unity 2019 or later
 - Go to `Window > Package Manager`
 - Click the `+` button and select `Add package from git URL`
-- Paste the repository URL https://github.com/srcnalt/OpenAI-Unity.git and click `Add`
+- Paste the repository URL https://github.com/Petr987654/OpenAI-Unity.git and click `Add`
 
 ### Setting Up Your OpenAI Account
 To use the OpenAI API, you need to have an OpenAI account. Follow these steps to create an account and generate an API key:
@@ -56,17 +56,30 @@ var openai = new OpenAIApi("sk-Me8...6yi");
 Do not share it with others or expose it in any client-side code (e.g. browsers, apps). 
 If you are using OpenAI for production, make sure to run it on the server side, where your API key can be securely loaded from an environment variable or key management service.
 
+
 **UPDATE Petr987654: You can also change a server:**
 
 Definition of the class OpenAIApi:
 ```csharp
-public OpenAIApi(string base_path = "https://api.openai.com/v1", string apiKey = null, string organization = null)
+public OpenAIApi(string apiKey = null, string base_path = null, string organization = null)
 ```
 
 Example:
 ```csharp
-private OpenAIApi openai = new OpenAIApi("https://1a...c/v1");
+private OpenAIApi openai = new OpenAIApi("sk-Me8...6yi", "https://1a...c/v1"); // (apiKey, server)
 ```
+
+In `auth.json`:
+
+```json
+{
+    "api_key": "sk-...W6yi",
+    "server": "https://1a...c/v1"
+}
+```
+
+If the server is not listed, the server `https://api.openai.com/v1` will be used.
+
 
 ### Making Requests to OpenAPI
 You can use the `OpenAIApi` class to make async requests to the OpenAI API.
