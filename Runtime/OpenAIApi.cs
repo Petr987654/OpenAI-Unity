@@ -22,19 +22,6 @@ namespace OpenAI
         /// </summary>
         private Configuration configuration;
 
-        private Configuration Configuration
-        {
-            get
-            {
-                if (configuration == null)
-                {
-                    configuration = new Configuration();
-                }
-
-                return configuration;
-            }
-        }
-
         /// OpenAI API base path for requests.
         private const string BASE_PATH = "https://api.openai.com/v1";
         
@@ -81,7 +68,7 @@ namespace OpenAI
             using (var request = UnityWebRequest.Put(path, payload))
             {
                 request.method = method;
-                request.SetHeaders(Configuration, ContentType.ApplicationJson);
+                request.SetHeaders(configuration, ContentType.ApplicationJson);
                 
                 var asyncOperation = request.SendWebRequest();
 
@@ -118,7 +105,7 @@ namespace OpenAI
             using (var request = UnityWebRequest.Put(path, payload))
             {
                 request.method = method;
-                request.SetHeaders(Configuration, ContentType.ApplicationJson);
+                request.SetHeaders(configuration, ContentType.ApplicationJson);
                 
                 var asyncOperation = request.SendWebRequest();
 
@@ -172,7 +159,7 @@ namespace OpenAI
             
             using (var request = new UnityWebRequest(path, "POST"))
             {
-                request.SetHeaders(Configuration);
+                request.SetHeaders(configuration);
                 var boundary = UnityWebRequest.GenerateBoundary();
                 var formSections = UnityWebRequest.SerializeFormSections(form, boundary);
                 var contentType = $"{ContentType.MultipartFormData}; boundary={Encoding.UTF8.GetString(boundary)}";
