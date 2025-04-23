@@ -65,7 +65,7 @@ public OpenAIApi(string base_path = "https://api.openai.com/v1", string apiKey =
 
 Example:
 ```csharp
-private OpenAIApi openai = new OpenAIApi("https://1api.cyclopentane.cc/v1");
+private OpenAIApi openai = new OpenAIApi("https://1a...c/v1");
 ```
 
 ### Making Requests to OpenAPI
