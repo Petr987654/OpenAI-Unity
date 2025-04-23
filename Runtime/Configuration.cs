@@ -20,7 +20,7 @@ namespace OpenAI
             }
         };
         
-        public Configuration(string apiKey = null, string organization = null)
+        public Configuration(string apiKey = null, string server = null, string organization = null)
         {
             if (apiKey == null)
             {
@@ -42,6 +42,7 @@ namespace OpenAI
                 Auth = new Auth()
                 {
                     ApiKey = apiKey,
+                    Server = server,
                     Organization = organization
                 };
             }
