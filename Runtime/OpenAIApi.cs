@@ -51,7 +51,7 @@ namespace OpenAI
             }
             else
             {
-                server = configufation.Auth.Server;
+                server = configuration.Auth.Server;
             }
         }
         
