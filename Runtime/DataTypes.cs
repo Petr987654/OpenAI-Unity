@@ -51,6 +51,7 @@ namespace OpenAI
     {
         [JsonRequired]
         public string ApiKey { get; set; }
+        public string Server { get; set;}
         public string Organization { get; set; }
     }
     #endregion
