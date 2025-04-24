@@ -5,6 +5,7 @@
 
 ## OpenAI Unity Package
 An unofficial Unity package that allows you to use the OpenAI API directly in the Unity game engine.
+Developer of the original OpenAI Unity package https://github.com/sponsors/srcnalt
 
 ## How To Use
 
@@ -21,7 +22,6 @@ To import the package, follow these steps:
 - Go to `Window > Package Manager`
 - Click the `+` button and select `Add package from git URL`
 - Paste the repository URL https://github.com/Petr987654/OpenAI-Unity.git and click `Add`
-- Developer of the original OpenAI Unity package https://github.com/sponsors/srcnalt
 
 ### Setting Up Your OpenAI Account
 To use the OpenAI API, you need to have an OpenAI account. Follow these steps to create an account and generate an API key:
