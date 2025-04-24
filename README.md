@@ -5,6 +5,7 @@
 
 ## OpenAI Unity Package
 An unofficial Unity package that allows you to use the OpenAI API directly in the Unity game engine.
+
 Developer of the original OpenAI Unity package https://github.com/sponsors/srcnalt
 
 ## How To Use
